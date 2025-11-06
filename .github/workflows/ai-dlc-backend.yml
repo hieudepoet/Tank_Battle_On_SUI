@@ -53,7 +53,18 @@ jobs:
     needs: [ai-security-audit, move-test, sdk-integration]
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to Sui Testnet
+      - uses: actions/checkout@v4
+      - name: Setup Sui CLI
         run: |
+          curl -fLJO https://github.com/MystenLabs/sui/releases/download/testnet-v1.14.0/sui-testnet-v1.14.0-ubuntu-x86_64.tgz
+          tar -xzf sui-testnet-v1.14.0-ubuntu-x86_64.tgz
+          sudo mv sui-testnet-v1.14.0-ubuntu-x86_64/sui /usr/local/bin/
+      - name: Deploy to Sui Testnet
+        env:
+          SUI_PRIVATE_KEY: ${{ secrets.SUI_PRIVATE_KEY }}
+        run: |
+          cd move_contracts
+          sui move build
+          node ../scripts/deployment/deploy-contracts.ts
           echo "🚀 CI/CD-Manager: Deploying to Sui Testnet..."
           echo "✅ Move contracts deployed successfully"
