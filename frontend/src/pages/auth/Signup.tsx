@@ -8,7 +8,7 @@ import type { FsUser } from "../../data/types";
 import { saveUserData } from "../../service/user";
 import { saveUserToLocalStorage } from "../../utils/userLocalStorage";
 
-const SignUp = () => {
+const Signup = () => {
   const [loading, setLoading] = React.useState(false);
 
   const navigate = useNavigate();
@@ -156,4 +156,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Signup;

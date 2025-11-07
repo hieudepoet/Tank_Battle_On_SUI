@@ -19,14 +19,19 @@
   },
   "dependencies": {
     "@mysten/sui.js": "^0.54.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.9.5",
     "ws": "^8.14.0"
   },
   "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.5.0",
     "concurrently": "^8.2.2",
     "ts-node": "^10.9.0",
-    "typescript": "^5.0.0",
-    "@types/ws": "^8.5.0",
-    "@types/node": "^20.0.0"
+    "typescript": "^5.0.0"
   },
-  "workspaces": ["frontend", "move_contracts"]
+  "workspaces": [
+    "frontend",
+    "move_contracts"
+  ]
 }
