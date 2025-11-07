@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import SignUp from "./pages/auth/Signup";
+import Signup from "./pages/auth/Signup";
 import Login from "./pages/auth/Login";
 
 function App() {
@@ -9,12 +9,10 @@ function App() {
     //   <Routes>
     //     <Route path="/" element={<Home />} />
     //     <Route path="/auth/login" element={<Login />} />
-    //     <Route path="/auth/signup" element={<SignUp />} />
+    //     <Route path="/auth/signup" element={<Signup />} />
     //   </Routes>
     // </BrowserRouter>
-    <div className="min-h-screen flex items-center justify-center bg-blue-500 text-white text-3xl font-bold">
-      Tailwind Works 🎉
-    </div>
+    <div className="bg-blue-500 min-h-screen">App is running</div>
   );
 }
 
