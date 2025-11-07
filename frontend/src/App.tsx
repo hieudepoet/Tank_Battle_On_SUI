@@ -1,11 +1,11 @@
-import React from 'react'
-import { WalletProvider } from '@suiet/wallet-kit'
-import '@suiet/wallet-kit/style.css'
-import GameContainer from './components/GameContainer'
-import WalletConnect from './wallet/WalletConnect'
-import WalletStatus from './components/WalletStatus'
-import GameLobby from './components/GameLobby'
-import './index.css'
+import React from "react";
+import { WalletProvider } from "@suiet/wallet-kit";
+import "@suiet/wallet-kit/style.css";
+import GameContainer from "./components/GameContainer";
+import WalletConnect from "./wallet/WalletConnect";
+import WalletStatus from "./components/WalletStatus";
+import GameLobby from "./components/GameLobby";
+import "./index.css";
 
 function App() {
   return (
@@ -15,20 +15,20 @@ function App() {
           <h1 className="text-white text-2xl font-bold">Tank Battle on Sui</h1>
           <WalletConnect />
         </header>
-        
+
         <div className="container mx-auto p-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
           <div className="lg:col-span-1 space-y-4">
             <WalletStatus />
             <GameLobby />
           </div>
-          
-          <div className="lg:col-span-2">
+
+          <div className="lg:col-span-2 w-full">
             <GameContainer />
           </div>
         </div>
       </div>
     </WalletProvider>
-  )
+  );
 }
 
-export default App
+export default App;
