@@ -12,7 +12,9 @@ function App() {
     //     <Route path="/auth/signup" element={<Signup />} />
     //   </Routes>
     // </BrowserRouter>
-    <div className="bg-blue-500 min-h-screen">App is running</div>
+    <div className="min-h-screen flex items-center justify-center bg-blue-500 text-white text-3xl">
+      Tailwind Not Works 🎉
+    </div>
   );
 }
 
