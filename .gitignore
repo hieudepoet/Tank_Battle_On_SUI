@@ -28,3 +28,22 @@ sui.log
 # AI-DLC logs
 .amazonq/logs/
 ai-review-*.log
+
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+firebase-debug.log.*
+firebase-debug
+storage-debug.log
+database-debug.log
+# service account keys — never commit!
+firebase-key.json
+serviceAccountKey.json
+*.serviceAccount.json
+google-services.json
+GoogleService-Info.plist
+firebase-messaging-sw.js    # usually built dynamically
+.firestore/
+firestore-debug.log
+.firebase-functions-cache/
+.functions-sources/
